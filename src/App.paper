@@ -3,8 +3,23 @@
         <div>
             <a href="https://knowpedia.github.io/entry/" target="_blank" class='knowpedia'></a>
             <h2>《概率论与数理统计》</h2>
-
-            <a href="https://github.com/knowpedia/Probability-Theory-And-Mathematical-Statistics" target="_blank">Fork Me On Github</a>
+            <ul :active='pagename=="random-events-and-probability"?"yes":"no"'>
+                <li>
+                    <h3 @click='openPage("random-events-and-probability","top")'>随机事件与概率</h3>
+                </li>
+                <li>
+                    <h3 @click='openPage("random-variables-and-their-distribution","top")'>随机变量及其分布</h3>
+                </li>
+                <li>
+                    <h3 @click='openPage("multidimensional-random-variables-and-their-distribution","top")'>多维随机变量及其分布
+                    </h3>
+                </li>
+                <li>
+                    <h3 @click='openPage("law-of-large-numbers-and-central-limit-theorem","top")'>大数定律与中心极限定理</h3>
+                </li>
+            </ul>
+            <a href="https://github.com/knowpedia/Probability-Theory-And-Mathematical-Statistics" target="_blank">Fork
+                Me On Github</a>
         </div>
     </div>
     <div class="content">
@@ -17,7 +32,10 @@
     import fixedScroll from './Service/fixedScroll.js';
 
     let pages = {
-
+        "random-events-and-probability": () => import('./random-events-and-probability.paper'),
+        "random-variables-and-their-distribution": () => import('./random-variables-and-their-distribution.paper'),
+        "multidimensional-random-variables-and-their-distribution": () => import('./multidimensional-random-variables-and-their-distribution.paper'),
+        "law-of-large-numbers-and-central-limit-theorem": () => import('./law-of-large-numbers-and-central-limit-theorem.paper')
     };
 
     export default {
@@ -28,14 +46,14 @@
             };
         },
         mounted() {
-            // let routerString = (window.location.href + "").split('#/')[1];
-            // let pagename = '     ', fixedName = 'top';
-            // if (routerString) {
-            //     let temp = routerString.split('/');
-            //     if (temp[0] in pages) pagename = temp[0];
-            //     fixedName = temp[1] || "top";
-            // }
-            // this.openPage(pagename, fixedName);
+            let routerString = (window.location.href + "").split('#/')[1];
+            let pagename = 'random-events-and-probability', fixedName = 'top';
+            if (routerString) {
+                let temp = routerString.split('/');
+                if (temp[0] in pages) pagename = temp[0];
+                fixedName = temp[1] || "top";
+            }
+            this.openPage(pagename, fixedName);
         },
         methods: {
             openPage(pagename, fixedName) {
