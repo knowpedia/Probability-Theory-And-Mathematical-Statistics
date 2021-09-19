@@ -1,6 +1,6 @@
 <template>
     <div class='doc-view' id='root-view'>
-        <header id="fixed-top" @click='doScroll("top")'>随机变量及其分布</header>
+        <header id="fixed-top">随机变量及其分布</header>
     </div>
 </template>
 <script>

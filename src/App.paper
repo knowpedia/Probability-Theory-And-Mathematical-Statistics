@@ -6,6 +6,45 @@
             <ul :active='pagename=="random-events-and-probability"?"yes":"no"'>
                 <li>
                     <h3 @click='openPage("random-events-and-probability","top")'>随机事件与概率</h3>
+                    <ul>
+                        <li>
+                            <h4 @click='doScroll("sjsjjqys")'>
+                                随机事件及其运算
+                            </h4>
+                            <ul>
+                                <li>
+                                    <h5 @click='doScroll("sjxx")'>
+                                        随机现象
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("ybkj")'>
+                                        样本空间
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("sjsj")'>
+                                        随机事件
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("sjbl")'>
+                                        随机变量
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5 @click='doScroll("sjy")'>
+                                        事件域
+                                    </h5>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4 @click='doScroll("glddyjqqdff")'>
+                                概率的定义及其确定方法
+                            </h4>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <h3 @click='openPage("random-variables-and-their-distribution","top")'>随机变量及其分布</h3>

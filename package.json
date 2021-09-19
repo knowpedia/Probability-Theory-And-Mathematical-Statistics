@@ -1,6 +1,6 @@
 {
   "name": "probability-theory-and-mathematical-statistics",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "概率论与数理统计，包括概率、分布、大数定律、参数估计、假设检验、方差分析、回归分析等统计学基础知识。",
   "scripts": {
     "start": "npm install && npm run dev",
@@ -25,7 +25,7 @@
     "@hai2007/polyfill": "0.1.1",
     "@hai2007/style": "^0.3.0",
     "@hai2007/tool": "^0.6.6",
-    "knowpedia": "0.3.0"
+    "knowpedia": "0.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
