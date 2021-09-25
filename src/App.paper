@@ -46,16 +46,6 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <h3 @click='openPage("random-variables-and-their-distribution","top")'>随机变量及其分布</h3>
-                </li>
-                <li>
-                    <h3 @click='openPage("multidimensional-random-variables-and-their-distribution","top")'>多维随机变量及其分布
-                    </h3>
-                </li>
-                <li>
-                    <h3 @click='openPage("law-of-large-numbers-and-central-limit-theorem","top")'>大数定律与中心极限定理</h3>
-                </li>
             </ul>
             <a href="https://github.com/knowpedia/Probability-Theory-And-Mathematical-Statistics" target="_blank">Fork
                 Me On Github</a>
@@ -71,10 +61,7 @@
     import fixedScroll from './Service/fixedScroll.js';
 
     let pages = {
-        "random-events-and-probability": () => import('./random-events-and-probability.paper'),
-        "random-variables-and-their-distribution": () => import('./random-variables-and-their-distribution.paper'),
-        "multidimensional-random-variables-and-their-distribution": () => import('./multidimensional-random-variables-and-their-distribution.paper'),
-        "law-of-large-numbers-and-central-limit-theorem": () => import('./law-of-large-numbers-and-central-limit-theorem.paper')
+        "random-events-and-probability": () => import('./random-events-and-probability.paper')
     };
 
     export default {
